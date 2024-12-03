@@ -14,7 +14,7 @@
 
             for(var i = 0; i < validPasswords.length; i++) {
                 string += validPasswords[i][0];
-                if (username == validPasswords[i][0] && password == validPasswords[i][0]) {
+                if (username.equals(validPasswords[i][0]) && password.equals(validPasswords[i][0])) {
                     string = "0";
                 }
             }
