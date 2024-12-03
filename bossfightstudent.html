@@ -7,14 +7,14 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #e9ecef; /* Light gray background */
+      background-color: #e9ecef;
       color: #030202;
       margin: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       height: 100vh;
-      transition: background-color 0.3s ease; /* Smooth background color change */
+      transition: background-color 0.3s ease;
     }
 
     .container {
@@ -31,23 +31,41 @@
       align-items: center;
       border-right: 2px solid #423f3b;
       padding-top: 100px;
-      text-align: center; /* Center text inside the sidebar */
+      text-align: center;
     }
 
     .sidebar p {
-      font-size: 1.5em; /* Larger font size for the header */
-      font-weight: bold; /* Make the header bold */
-      margin-bottom: 10px; /* Add spacing below the header */
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #f8f9fa;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .sidebar ol {
-      padding-left: 20px; /* Add some space before list items */
+      padding-left: 0;
+      list-style: none;
     }
 
     .sidebar li {
-      font-size: 1.2em; /* Larger font size for list items */
-      margin-bottom: 5px; /* Add spacing between items */
-      color: #0f0e0e; /* Slightly lighter color for better contrast */
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #f8f9fa;
+      font-weight: 600;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar li:nth-child(1) {
+      color: #ffd700; /* Gold for the first item */
+    }
+
+    .sidebar li:nth-child(2) {
+      color: #c0c0c0; /* Silver for the second item */
+    }
+
+    .sidebar li:nth-child(3) {
+      color: #cd7f32; /* Bronze for the third item */
     }
 
     .main {
@@ -59,32 +77,31 @@
     }
 
     .center {
-      position: relative; /* Allow absolute positioning of the overlay */
+      position: relative;
       text-align: center;
       padding: 20px;
-      border-radius: 10px; /* Rounded corners */
+      border-radius: 10px;
     }
 
     .center img {
-      max-width: 100%; /* Ensure image scales within container */
-      max-height: 100%; /* Prevent image overflow */
-      border-radius: 40px; /* Match container's rounded corners */
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 40px;
     }
 
     .overlay-image {
-      position: absolute; /* Position the overlay image over the base image */
-      top: 50%; /* Adjust vertical position */
-      left: 50%; /* Adjust horizontal position */
-      transform: translate(-50%, -50%); /* Center the overlay image */
-      width: 150px; /* Set the size of the overlay image */
-      z-index: 1; /* Make sure overlay image is above the base image */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
-      <p>Quick View Leaderboard</p>
+      <p>Leaderboard</p>
       <ol>
         <li>Mickey Mouse</li>
         <li>Peter Griffin</li>
@@ -94,7 +111,6 @@
     <div class="main">
       <div class="center">
         <img src="https://cdn2.unrealengine.com/remix-key-art-1920x1080-0b23bdca2f5f.jpg" alt="Base Image">
-
         <img class="overlay-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStswyKqDfTGvAIdBFqeFc7RzsWoi9YBDXSQdEa9aJAaQvi1Zn7hub-po8b6cPqK3jd11E&usqp=CAU" alt="Overlay Image">
       </div>
     </div>
