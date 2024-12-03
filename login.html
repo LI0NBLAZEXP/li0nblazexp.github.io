@@ -4,29 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Screen</title>
-    <script>
-        // Below function Executes on click of login button.
-        function validate() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            // const validPasswords = [ ["djs", "aduck"], ["doodletheduck", "puck"]];
-            // alert();
-            // var string = "";
-
-            // for(var i = 0; i < validPasswords.length; i++) {
-            //      string += validPasswords[i][0];
-            //      if (username == validPasswords[i][0] && password == validPasswords[i][1]) {
-            //          string = "0";
-            //      }
-            // }
-            if (username == "asd" && password == "123") {
-                window.location.href = "https://li0nblazexp.github.io/home.html"; // Redirecting to other page.
-            } else {
-                alert("no");
-            }
-        }
-        
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -88,9 +65,47 @@
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn" onclick="validate()">Login</button>
+        <button type="submit" class="btn" id="login">Login</button>
     </form>
 </div>
+
+    <script>
+        // Below function Executes on click of login button.
+        function validate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            const validPasswords = [ ["djs", "aduck"], ["doodletheduck", "puck"]];
+            var address = "login.html";
+            for(var i = 0; i < validPasswords.length; i++) {
+                if (username == validPasswords[i][0] && password == validPasswords[i][1]) {
+                    address = "home.html";
+                }
+            }
+
+            window.location = address;
+
+            // alert();
+            // var string = "";
+
+            // for(var i = 0; i < validPasswords.length; i++) {
+            //      string += validPasswords[i][0];
+            //      if (username == validPasswords[i][0] && password == validPasswords[i][1]) {
+            //          string = "0";
+            //      }
+            // }
+            // if (username == "asd" && password == "123") {
+            //     window.location = "file:///C:/Users/decla/softDev/li0nblazexp.github.io/home.html"; // Redirecting to other page.
+            // } else {
+            //     alert("no");
+            // }
+        }
+
+        document.getElementById("login").addEventListener("click", (e) => {
+            e.preventDefault();
+            validate();
+        });
+        
+    </script>
 
 </body>
 </html>
