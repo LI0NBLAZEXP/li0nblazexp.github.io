@@ -59,17 +59,25 @@
     }
 
     .center {
+      position: relative; /* Allow absolute positioning of the overlay */
       text-align: center;
-      border: 3px solid #c93c3c;
       padding: 20px;
-      background-color: #fff;
       border-radius: 10px; /* Rounded corners */
     }
 
     .center img {
       max-width: 100%; /* Ensure image scales within container */
       max-height: 100%; /* Prevent image overflow */
-      border-radius: 10px; /* Match container's rounded corners */
+      border-radius: 40px; /* Match container's rounded corners */
+    }
+
+    .overlay-image {
+      position: absolute; /* Position the overlay image over the base image */
+      top: 50%; /* Adjust vertical position */
+      left: 50%; /* Adjust horizontal position */
+      transform: translate(-50%, -50%); /* Center the overlay image */
+      width: 150px; /* Set the size of the overlay image */
+      z-index: 1; /* Make sure overlay image is above the base image */
     }
   </style>
 </head>
@@ -85,7 +93,9 @@
     </div>
     <div class="main">
       <div class="center">
-        <img src="https://cdn2.unrealengine.com/remix-key-art-1920x1080-0b23bdca2f5f.jpg" alt="Javascript Game">
+        <img src="https://cdn2.unrealengine.com/remix-key-art-1920x1080-0b23bdca2f5f.jpg" alt="Base Image">
+
+        <img class="overlay-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStswyKqDfTGvAIdBFqeFc7RzsWoi9YBDXSQdEa9aJAaQvi1Zn7hub-po8b6cPqK3jd11E&usqp=CAU" alt="Overlay Image">
       </div>
     </div>
   </div>
