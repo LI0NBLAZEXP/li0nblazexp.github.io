@@ -30,7 +30,7 @@
       justify-content: flex-start;
       align-items: center;
       border-right: 2px solid #423f3b;
-      padding-top: 100px;
+      padding-top: 50px;
       text-align: center;
     }
 
@@ -46,6 +46,7 @@
     .sidebar ol {
       padding-left: 0;
       list-style: none;
+      margin: 0;
     }
 
     .sidebar li {
@@ -57,15 +58,40 @@
     }
 
     .sidebar li:nth-child(1) {
-      color: #ffd700; /* Gold for the first item */
+      color: #ffd700;
     }
 
     .sidebar li:nth-child(2) {
-      color: #c0c0c0; /* Silver for the second item */
+      color: #c0c0c0;
     }
 
     .sidebar li:nth-child(3) {
-      color: #cd7f32; /* Bronze for the third item */
+      color: #cd7f32;
+    }
+
+    .button-container {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .button-container button {
+      padding: 15px;
+      font-size: 1.5em;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .next-btn {
+      background-color: #28a745;
+    }
+
+    .end-btn {
+      background-color: #dc3545;
+      color: white;
     }
 
     .main {
@@ -95,9 +121,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 150px;
-      cursor: pointer; 
+      cursor: pointer;
     }
-
   </style>
 </head>
 <body>
@@ -109,19 +134,18 @@
         <li>Peter Griffin</li>
         <li>Tony the Tiger</li>
       </ol>
+      <div class="button-container">
+        <button class="next-btn">Next Question</button>
+        <button class="end-btn">End Game</button>
+      </div>
     </div>
     <div class="main">
       <div class="center">
         <img src="https://cdn2.unrealengine.com/remix-key-art-1920x1080-0b23bdca2f5f.jpg" alt="Base Image">
         
         <img class="overlay-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStswyKqDfTGvAIdBFqeFc7RzsWoi9YBDXSQdEa9aJAaQvi1Zn7hub-po8b6cPqK3jd11E&usqp=CAU" alt="Overlay Image">
-        
-        </div>
       </div>
     </div>
   </div>
-
-  <script>
-  </script>
 </body>
 </html>
