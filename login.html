@@ -9,7 +9,13 @@
         function validate() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
+            var validPasswords = [ ["djs", "aduck"], ["doodletheduck", "puck"]];
 
+            for(int i = 0; i < validPasswords.length; i++) {
+                if (username == validPasswords[i][0] && password == validPasswords[i][0]) {
+                    alert("yes");
+                }
+            }
             if (username == "asd" && password == "123") {
                 window.location.href = "https://li0nblazexp.github.io/home.html"; // Redirecting to other page.
             } else {
