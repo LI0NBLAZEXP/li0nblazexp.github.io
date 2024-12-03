@@ -10,13 +10,15 @@
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
             const validPasswords = [ ["djs", "aduck"], ["doodletheduck", "puck"]];
+            var string = "";
 
             for(var i = 0; i < validPasswords.length; i++) {
-                alert(validPasswords[i][0]);
+                string += validPasswords[i][0];
                 if (username == validPasswords[i][0] && password == validPasswords[i][0]) {
-                    alert(validPasswords[i][1]);
+                    string = "0";
                 }
             }
+            alert(string);
             // if (username == "asd" && password == "123") {
             //     window.location.href = "https://li0nblazexp.github.io/home.html"; // Redirecting to other page.
             // }
