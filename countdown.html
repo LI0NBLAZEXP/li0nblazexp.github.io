@@ -8,7 +8,7 @@
         /* Basic styles for body and layout */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f3c439; /* Light gray background */
+            background-color: #225a91; /* Light gray background */
             color: #333; /* Dark text for contrast */
             display: flex;
             flex-direction: column;
@@ -139,39 +139,26 @@
 
     <!-- Main Game Section -->
     <h1>Attention Fixers</h1>
-    <div id="timer">Focus Time: <span id="time">120</span> seconds</div>
+    <div id="timer">Countdown to next Focus Time: <span id="time">5</span> minutes</div>
     <div id="game" class="fade">
-        <p>Click the button as many times as you can!</p>
-        <button id="clickButton">Click Me!</button>
-        <div id="points">Points: <span id="pointCount">0</span></div>
+        <p>Class time!</p>
     </div>
 
     <script>
         // Setting up the timer and points
-        let timeLeft = 10; // 2 minutes countdown
-        let points = 0; // Initialize points
+        let secondsLeft = 10; // 2 minutes countdown
         const timerElement = document.getElementById('time');
-        const pointCountElement = document.getElementById('pointCount');
-        const clickButton = document.getElementById('clickButton');
 
         // Start the countdown timer
         const timer = setInterval(() => {
-            timeLeft--;
-            timerElement.textContent = timeLeft;
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                clickButton.disabled = true; // Disable button when time's up
-                alert(`Time's up! You scored ${points} points!`);
-                document.body.style.backgroundColor = '#ffc107'; // Change background color when time is up
-                window.location = "countdown.html";
+            secondsLeft--;
+            timerElement.textContent = Math.floor(secondsLeft / 5) + 1;
+            if (secondsLeft <= 0) {
+                window.location = "studentHome.html";
             }
         }, 1000);
 
         // Click event to increase points
-        clickButton.addEventListener('click', () => {
-            points++;
-            pointCountElement.textContent = points; // Update points display
-        });
     </script>
 
 </body>

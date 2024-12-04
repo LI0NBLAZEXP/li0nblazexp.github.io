@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #9e71ed;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -74,11 +74,14 @@
         function validate() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
-            const validPasswords = [ ["djs", "aduck"], ["doodletheduck", "puck"]];
+            const validPasswords = [ ["teacheraccount", "teacherpassword"], ["declans", "password1"], ["colleenr", "password2"], ["carlosp", "password3"]];
             var address = "login.html";
-            for(var i = 0; i < validPasswords.length; i++) {
+            if (username == validPasswords[0][0] && password == validPasswords[0][1]) {
+                    address = "teacherHome.html";
+                }
+            for(var i = 1; i < validPasswords.length; i++) {
                 if (username == validPasswords[i][0] && password == validPasswords[i][1]) {
-                    address = "home.html";
+                    address = "studentHome.html";
                 }
             }
 

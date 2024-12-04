@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Fixers Demo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #9c9267;
+            color: #333;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .title {
+            margin-left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav .links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 35px;
+            font-size: 18px;
+        }
+
+        /* Main Content */
+        .content {
+            display: flex;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        /* Table Style */
+        table {
+            width: 60%;
+            margin-left: 50px;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Image Container */
+        .image-container {
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-right: 50px;
+        }
+
+        .image-container img {
+            margin: 10px; /* Space between images */
+            width: 200px;
+            height: 200px;
+        }
+
+        /* Link Image Styling */
+        .linked-image {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .linked-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+<a href="fixer.html">
+    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/305900/header.jpg?t=1731093146" alt="Minigame"></a> 
+</body>
+</html>
