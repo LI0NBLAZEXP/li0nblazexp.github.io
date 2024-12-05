@@ -3,9 +3,9 @@ body {
     background-color: #9c9267;
     /* background-color: black; */
     color: #333;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-start; */
     justify-content: space-between;
     height: 100vh;
     margin: 0;
@@ -39,23 +39,18 @@ nav .links a {
     font-size: 18px;
 }
 
+
+
+
+
+
+
 /* Main Content */
 .content {
-    display: flex;
+    /* display: flex; */
+    padding-left: 10px;
     width: 100%;
     margin-top: 60px;
-}
-
-/* Table Style */
-table {
-    width: 60%;
-    margin-left: 50px;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
 }
 
 /* Image Container */
@@ -70,9 +65,9 @@ th, td {
 }
 
 .image-container img {
-    margin: 10px; /* Space between images */
-    width: 20vw;
-    height: 15vw;
+    width: 16vw;
+    height: 12vw;
+
 }
 
 /* Link Image Styling */
@@ -84,3 +79,121 @@ th, td {
 .linked-image:hover {
     transform: scale(1.05);
 }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+  }
+
+li {
+    padding: 30px;
+    margin-bottom: 7px;
+
+    background-color: #333;
+    border: #333;
+    border-width: 5px;
+
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
+
+/*Structure for grid layout */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+    .row{float: left;}
+    .row{padding: 15px;}
+  .col-05 {width: 4.166%;}
+  .col-1 {width: 8.33%;}
+  .col-15 {width:12.496%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-55{width: 42.8%;}
+  .col-6 {width:  50%;}
+  .col-7 {width: 58.33%;}
+  .col-75{width: 62.5;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  [class*="col-"] {
+    float: left;
+    padding: 5px;
+  }
+
+
+
+  /*Fixed image positions*/
+
+  .game1 {
+    position: fixed;
+    bottom: 0%;
+    right: 20%;
+    
+    
+    border-color: hotpink;
+    border-style: solid;
+    border-width: 4px;
+  }
+
+  .game2 {
+    position: fixed;
+    bottom: 30%;
+    right: 20%;
+
+    border-color: hotpink;
+    border-style: solid;
+    border-width: 4px;
+  }
+
+  .game3 {
+    position: fixed;
+    bottom: 60%;
+    right: 20%;
+
+    border-color: hotpink;
+    border-style: solid;
+    border-width: 4px;
+  }
+
+  .game4 {
+    position: fixed;
+    bottom: 0%;
+    right: 2%;
+
+    
+    border-color: red;
+    border-style: solid;
+    border-width: 4px;
+  }
+
+  .game5 {
+    position: fixed;
+    bottom: 30%;
+    right: 2%;
+    
+    border-color: rgb(30, 204, 30);
+    border-style: solid;
+    border-width: 4px;
+  }
+
+  .game6 {
+    position: fixed;
+    bottom: 60%;
+    right: 2%;
+
+    border-color: rgb(30, 204, 30);
+    border-style: solid;
+    border-width: 4px;
+  }
