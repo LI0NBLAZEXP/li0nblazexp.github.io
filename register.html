@@ -43,7 +43,8 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        button {
+
+        .button {
             background-color: #4CAF50; /* Green background */
             border: none; /* No border */
             color: white; /* White text */
@@ -97,19 +98,28 @@
             <label for="cPassword">Confirm password</label>
             <input type="password" id="cPassword" name="cPassword" required>
         </div>
-        <button type="submit" class="button" onclick="gohome()">Login</button>
+        <button type="submit" class="button" id="login">Login</button>
         <br>
         <p>Already have an account? <a href="login.html">Login.</a></p>
     </form>
 </div>
     <script>
         function gohome() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+            var cPassword = document.getElementById("cPassword").value;
             window.location = "teacherHome.html";
         }
 
         function login() {
             window.location = "login.html";
         }
+
+        document.getElementById("login").addEventListener("click", (e) => {
+            e.preventDefault();
+            gohome();
+        });
     </script>
 </body>
 </html>
