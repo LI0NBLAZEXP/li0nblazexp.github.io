@@ -71,8 +71,8 @@ th, td {
 
 .image-container img {
     margin: 10px; /* Space between images */
-    width: 200px;
-    height: 200px;
+    width: 20vw;
+    height: 15vw;
 }
 
 /* Link Image Styling */
